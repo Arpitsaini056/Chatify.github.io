@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Call - Chatify</title>
+    <link rel="stylesheet" href="videoCall.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="user-info">
+            <div class="user-name" id="chatUser">User 1</div>
+            <div class="status" id="status">In a Video Call</div>
+        </div>
+        <button onclick="endVideoCall()">End Call</button>
+    </nav>
+
+    <!-- Video Call Container -->
+    <div class="video-call-container">
+        <video id="userVideo" autoplay></video>
+        <video id="peerVideo" autoplay></video>
+    </div>
+
+    <script src="videoCall.js"></script>
+</body>
+</html>

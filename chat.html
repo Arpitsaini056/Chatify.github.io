@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatify - Chat</title>
+    <link rel="stylesheet" href="chat.css">
+</head>
+<body>
+    <!-- Navbar with typing status and call/block options -->
+    <nav class="navbar">
+        <div class="user-info">
+            <div class="user-name" id="chatUser"></div>
+            <div class="status" id="status">Online</div>
+        </div>
+        <div id="typingStatus" class="typing-status"></div>
+
+        <!-- Call and Block Options -->
+        <div class="call-block-options">
+            <button id="videoCallBtn" onclick="startVideoCall()">Video Call</button>
+            <button id="voiceCallBtn" onclick="startVoiceCall()">Voice Call</button>
+            <button id="blockBtn" onclick="blockUser()">Block</button>
+        </div>
+    </nav>
+
+    <!-- Chat Messages -->
+    <div class="chat-box" id="chatBox">
+        <!-- Messages will appear here -->
+    </div>
+
+    <!-- Chat Input -->
+    <div class="chat-input">
+        <input type="text" id="chatInput" placeholder="Type a message..." onkeyup="typingStatus()" />
+        <button onclick="sendMessage()">Send</button>
+    </div>
+
+    <script src="chat.js"></script>
+    <script>
+        // Get the username from the query string (e.g., ?user=User 1)
+        const urlParams = new URLSearchParams(window.location.search);
+        const userName = urlParams.get('user');
+        
+        // Set the username in the chat header
+        document.getElementById('chatUser').textContent = userName;
+    </script>
+</body>
+</html>

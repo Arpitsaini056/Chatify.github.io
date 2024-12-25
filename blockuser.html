@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block User - Chatify</title>
+    <link rel="stylesheet" href="blockUser.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="user-info">
+            <div class="user-name" id="chatUser">User 1</div>
+            <div class="status" id="status">Online</div>
+        </div>
+    </nav>
+
+    <!-- Block Confirmation -->
+    <div class="block-confirmation">
+        <h2>Are you sure you want to block this user?</h2>
+        <button onclick="confirmBlock()">Yes, Block</button>
+        <button onclick="cancelBlock()">Cancel</button>
+    </div>
+
+    <script>
+        function confirmBlock() {
+            alert("User has been blocked.");
+            window.location.href = "chat.html";  // Redirect back to the chat page
+        }
+
+        function cancelBlock() {
+            window.location.href = "chat.html";  // Cancel and go back to chat page
+        }
+    </script>
+</body>
+</html>

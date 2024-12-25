@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup & Login</title>
+
+    <!-- Linking the CSS file -->
+    <link rel="stylesheet" href="styles.css">
+  <!-- Make sure the path to your CSS file is correct -->
+
+</head>
+<body>
+    <!-- Signup Form -->
+    <div id="signup-form">
+        <h2>Sign Up</h2>
+        <label for="phone">Mobile Number:</label>
+        <input type="text" id="phone" placeholder="Enter Mobile Number" required><br>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" placeholder="Enter Password" required><br>
+        
+        <button onclick="signup()">Sign Up</button>
+    </div>
+
+    <!-- Login Form -->
+    <div id="login-form" class="hidden">
+        <h2>Login</h2>
+        <label for="login-phone">Mobile Number:</label>
+        <input type="text" id="login-phone" placeholder="Enter Mobile Number" required><br>
+        
+        <label for="login-password">Password:</label>
+        <input type="password" id="login-password" placeholder="Enter Password" required><br>
+        
+        <button onclick="login()">Login</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

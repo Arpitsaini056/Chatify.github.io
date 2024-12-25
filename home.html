@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatify</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="app-name">Chatify</div>
+        <div class="search-container">
+            <input type="text" placeholder="Search users..." id="searchInput" onkeyup="searchContacts()" />
+        </div>
+        <button onclick="loadContacts()">C</button>
+    </nav>
+
+    <!-- Chat Section -->
+    <div class="chat-list" id="chatList">
+        <!-- Contacts will appear here -->
+    </div>
+
+    <script src="home.js"></script>
+</body>
+</html>
